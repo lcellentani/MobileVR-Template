@@ -1,0 +1,6 @@
+<project name="secure_properties">
+  <property name="key.store" value="vrsample.keystore" />
+  <property name="key.store.password" value="vrsample" />
+  <property name="key.alias" value="vrsample" />
+  <property name="key.alias.password" value="vrsample" />
+</project>

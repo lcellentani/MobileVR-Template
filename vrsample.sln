@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vrsample", "vrsample.vcxproj", "{BD6E6520-0728-4FA2-93DC-6F7A600EAD85}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Tegra-Android = Debug|Tegra-Android
+		Release|Tegra-Android = Release|Tegra-Android
+		Shipping|Tegra-Android = Shipping|Tegra-Android
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD6E6520-0728-4FA2-93DC-6F7A600EAD85}.Debug|Tegra-Android.ActiveCfg = Debug|Tegra-Android
+		{BD6E6520-0728-4FA2-93DC-6F7A600EAD85}.Debug|Tegra-Android.Build.0 = Debug|Tegra-Android
+		{BD6E6520-0728-4FA2-93DC-6F7A600EAD85}.Release|Tegra-Android.ActiveCfg = Release|Tegra-Android
+		{BD6E6520-0728-4FA2-93DC-6F7A600EAD85}.Release|Tegra-Android.Build.0 = Release|Tegra-Android
+		{BD6E6520-0728-4FA2-93DC-6F7A600EAD85}.Shipping|Tegra-Android.ActiveCfg = Shipping|Tegra-Android
+		{BD6E6520-0728-4FA2-93DC-6F7A600EAD85}.Shipping|Tegra-Android.Build.0 = Shipping|Tegra-Android
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

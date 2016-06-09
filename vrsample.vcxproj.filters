@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="jni">
+      <UniqueIdentifier>90860270-de38-466d-88ef-167c486fc55b</UniqueIdentifier>
+    </Filter>
+    <Filter Include="res">
+      <UniqueIdentifier>e2cd5f99-a1cb-402b-8538-496739503cc2</UniqueIdentifier>
+    </Filter>
+    <Filter Include="res\values">
+      <UniqueIdentifier>8393cd1c-4a64-4bd6-93d5-fde51e51a9e9</UniqueIdentifier>
+    </Filter>
+    <Filter Include="native_app_glue">
+      <UniqueIdentifier>{26d629dd-0af1-4939-a0ac-c40a0e34baa2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{bf4ec802-5aa7-491f-bc90-6e0e14618ae1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\com">
+      <UniqueIdentifier>{a05c60a0-04d2-4942-bf14-4c9a662d079d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\com\justfunnygames">
+      <UniqueIdentifier>{6518f56c-f76a-467a-84ea-fe1e86a68f8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\com\justfunnygames\vrsample">
+      <UniqueIdentifier>{5f38c6f5-0621-4ca5-93f9-6ecb6e3407cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets">
+      <UniqueIdentifier>{a7a5c913-5cf5-4f34-afcd-b3ba9a5e7ba0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidBuild Include="AndroidManifest.xml" />
+    <AndroidBuild Include="res\values\strings.xml">
+      <Filter>res\values</Filter>
+    </AndroidBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="jni\main.cpp">
+      <Filter>jni</Filter>
+    </ClCompile>
+    <ClCompile Include="native_app_glue\android_native_app_glue.c">
+      <Filter>native_app_glue</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="native_app_glue\android_native_app_glue.h">
+      <Filter>native_app_glue</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\VrApi.h">
+      <Filter>jni</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\VrApi_Android.h">
+      <Filter>jni</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\VrApi_Config.h">
+      <Filter>jni</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\VrApi_Helpers.h">
+      <Filter>jni</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\VrApi_LocalPrefs.h">
+      <Filter>jni</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\VrApi_Types.h">
+      <Filter>jni</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\VrApi_Version.h">
+      <Filter>jni</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <JCompile Include="src\com\justfunnygames\vrsample\MainActivity.java">
+      <Filter>src\com\justfunnygames\vrsample</Filter>
+    </JCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\oculussig_fff6cd02">
+      <Filter>assets</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="NsightTegraProject">
+    <NsightTegraProjectRevisionNumber>11</NsightTegraProjectRevisionNumber>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Tegra-Android">
+      <Configuration>Debug</Configuration>
+      <Platform>Tegra-Android</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Tegra-Android">
+      <Configuration>Release</Configuration>
+      <Platform>Tegra-Android</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Shipping|Tegra-Android">
+      <Configuration>Shipping</Configuration>
+      <Platform>Tegra-Android</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{BD6E6520-0728-4FA2-93DC-6F7A600EAD85}</ProjectGuid>
+    <RootNamespace>vrsample</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Tegra-Android'">
+    <AndroidTargetAPI>android-19</AndroidTargetAPI>
+    <AndroidMinAPI>android-19</AndroidMinAPI>
+    <AndroidMaxAPI>
+    </AndroidMaxAPI>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Tegra-Android'">
+    <AndroidTargetAPI>android-19</AndroidTargetAPI>
+    <AndroidMinAPI>android-19</AndroidMinAPI>
+    <AndroidNativeAPI>UseMin</AndroidNativeAPI>
+    <AndroidMaxAPI>
+    </AndroidMaxAPI>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Shipping|Tegra-Android'">
+    <AndroidTargetAPI>android-19</AndroidTargetAPI>
+    <AndroidMinAPI>android-19</AndroidMinAPI>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros">
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Tegra-Android'">
+    <OutDir>$(SolutionDir)\.build\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>.build\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Tegra-Android'">
+    <OutDir>$(SolutionDir)\.build\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>.build\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping|Tegra-Android'">
+    <OutDir>$(SolutionDir)\.build\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>.build\$(Platform)\$(Configuration)\</IntDir>
+    <FastDeploy>false</FastDeploy>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Tegra-Android'">
+    <ClCompile>
+      <CppLanguageStandard>gnu++11</CppLanguageStandard>
+      <PreprocessorDefinitions>DISABLE_IMPORTGL</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>android;EGL;GLESv3;vrapi</AdditionalDependencies>
+      <AdditionalLibraryDirectories>libs/armeabi-v7a</AdditionalLibraryDirectories>
+      <EchoCommandLines>false</EchoCommandLines>
+      <ReportUndefinedSymbols>true</ReportUndefinedSymbols>
+    </Link>
+    <AntBuild>
+      <JarDirectories>
+      </JarDirectories>
+    </AntBuild>
+    <AntBuild>
+      <JarDependencies>
+      </JarDependencies>
+      <NativeLibDirectories>libs/armeabi-v7a</NativeLibDirectories>
+      <NativeLibDependencies>vrapi.so</NativeLibDependencies>
+      <SecurePropertiesLocation>
+      </SecurePropertiesLocation>
+    </AntBuild>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Tegra-Android'">
+    <ClCompile>
+      <CppLanguageStandard>gnu++11</CppLanguageStandard>
+      <PreprocessorDefinitions>DISABLE_IMPORTGL</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>android;EGL;GLESv3;vrapi</AdditionalDependencies>
+      <AdditionalLibraryDirectories>libs/armeabi-v7a</AdditionalLibraryDirectories>
+    </Link>
+    <AntBuild>
+      <NativeLibDirectories>libs/armeabi-v7a</NativeLibDirectories>
+      <NativeLibDependencies>vrapi.so</NativeLibDependencies>
+      <SecurePropertiesLocation>C:\DEV\FUN\vrsample\secure_properties.xml</SecurePropertiesLocation>
+    </AntBuild>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Shipping|Tegra-Android'">
+    <ClCompile>
+      <CppLanguageStandard>gnu++11</CppLanguageStandard>
+      <PreprocessorDefinitions>DISABLE_IMPORTGL</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>android;EGL;GLESv3;vrapi</AdditionalDependencies>
+      <AdditionalLibraryDirectories>libs/armeabi-v7a</AdditionalLibraryDirectories>
+    </Link>
+    <AntBuild>
+      <NativeLibDirectories>libs/armeabi-v7a</NativeLibDirectories>
+      <NativeLibDependencies>vrapi.so</NativeLibDependencies>
+      <SecurePropertiesLocation>C:\DEV\FUN\vrsample\secure_properties.xml</SecurePropertiesLocation>
+      <SkipAntStep>False</SkipAntStep>
+    </AntBuild>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <AndroidBuild Include="AndroidManifest.xml">
+      <SubType>Designer</SubType>
+    </AndroidBuild>
+    <AndroidBuild Include="res\values\strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="jni\main.cpp" />
+    <ClCompile Include="native_app_glue\android_native_app_glue.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="jni\VrApi.h" />
+    <ClInclude Include="jni\VrApi_Android.h" />
+    <ClInclude Include="jni\VrApi_Config.h" />
+    <ClInclude Include="jni\VrApi_Helpers.h" />
+    <ClInclude Include="jni\VrApi_LocalPrefs.h" />
+    <ClInclude Include="jni\VrApi_Types.h" />
+    <ClInclude Include="jni\VrApi_Version.h" />
+    <ClInclude Include="native_app_glue\android_native_app_glue.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <JCompile Include="src\com\justfunnygames\vrsample\MainActivity.java" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\oculussig_fff6cd02" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

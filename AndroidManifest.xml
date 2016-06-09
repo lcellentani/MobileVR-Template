@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- BEGIN_INCLUDE(manifest) -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        package="com.justfunnygames.vrsample"
+        android:versionCode="2"
+        android:versionName="1.0">
+
+  <!-- This is the platform API where NativeActivity was introduced. -->
+  <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="19" />
+
+  <application android:label="@string/app_name">
+      <meta-data android:name="com.samsung.android.vr.application.mode" android:value="vr_only"/>
+      <activity android:name="com.justfunnygames.vrsample.MainActivity"
+                android:label="@string/app_name"
+                android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+                android:launchMode="singleTask"
+                android:screenOrientation="landscape"
+                android:configChanges="orientation|screenSize|keyboard|keyboardHidden">
+          <!-- Tell NativeActivity the name of our .so -->
+          <meta-data android:name="android.app.lib_name"
+                  android:value="vrsample" />
+          <intent-filter>
+              <action android:name="android.intent.action.MAIN" />
+              <category android:name="android.intent.category.LAUNCHER" />
+          </intent-filter>
+      </activity>
+  </application>
+
+  <!-- Tell the system this app requires OpenGL ES 3.0. -->
+  <uses-feature android:glEsVersion="0x00030000" android:required="true"/>
+  <!-- Allow reading of the appropriate lens distortion file for the device. -->
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+  <!-- Network access needed for OVRMonitor -->
+  <uses-permission android:name="android.permission.INTERNET" />
+  
+</manifest> 
+<!-- END_INCLUDE(manifest) -->
